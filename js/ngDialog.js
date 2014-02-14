@@ -48,9 +48,11 @@
 
 						if (animationEndSupport) {
 							$dialog.unbind(animationEndEvent).bind(animationEndEvent, function () {
+								$dialog.scope().$parent.$destroy();
 								$dialog.remove();
 							}).addClass('ngdialog-closing');
 						} else {
+							$dialog.scope().$parent.$destroy();
 							$dialog.remove();
 						}
 

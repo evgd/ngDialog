@@ -120,7 +120,7 @@
 							});
 
 							scope.$on('$destroy', function () {
-								$dialog.remove();
+								//$dialog.remove(); TODO should be called after child scopes destroy
 							});
 
 							$body.addClass('ngdialog-open').append($dialog);
